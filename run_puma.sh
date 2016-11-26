@@ -12,4 +12,4 @@ MAX_THREADS=$(( 256 / WORKERS + 1 )) ; export MAX_THREADS
 MIN_THREADS=$(( MAX_THREADS / 4 + 1 ))
 
 
-  bundle exec puma -w $WORKERS -t $MIN_THREADS:$MAX_THREADS -b tcp://0.0.0.0:8080 -e production &
+   rvmsudo bundle exec puma config.ru -w $WORKERS -t $MIN_THREADS:$MAX_THREADS -b tcp://0.0.0.0:80 -e production &
