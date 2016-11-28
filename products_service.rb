@@ -7,7 +7,7 @@ require 'sequel'
 
 
 # Configure Sequel ORM (Sequel::DATABASES)
-DB = Sequel.postgres(   :host => "localhost", :database => 'geo',:user => 'postgres',
+DB = Sequel.postgres(   :host => "191.234.186.64", :database => 'geo',:user => 'postgres',
     :password => '1q2w3e',
 
   :max_connections => (ENV['MAX_THREADS'] || 4).to_i,
